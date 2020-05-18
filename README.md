@@ -1,8 +1,19 @@
 # Zumi-rpc
-remote procedure call server and client for remote control of zumi robots
+Remote procedure call server and client for remote control of [Zumi robots](https://www.robolink.com/zumi/).
+
+* *Python* API mirroring the [*Zumi* API](http://docs.robolink.com/zumi-library) from remote 
+* allows compute intensive robot algoriths 
+* uses the [*RPYC*](https://rpyc.readthedocs.io/en/latest/) remote procedure call lib for efficent and **secure** remote calls 
 
 ## Setup
 
+### On the Zumi an the Client PC
+Install ``rpyc``:
+```
+pip install rpyc
+```
+
+ 
 ### Generate Certificates
 ```
 openssl genrsa -out zumi_rpc.key 4096
