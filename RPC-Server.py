@@ -20,7 +20,7 @@ import os
 import datetime
 from zumi.zumi import Zumi
 import picamera
-
+import numpy as np
 
 # server parameters 
 DEBUG=True
