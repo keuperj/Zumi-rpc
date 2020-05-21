@@ -22,6 +22,10 @@ from zumi.zumi import Zumi
 import picamera
 import numpy as np
 
+#pickling of return objects 
+rpyc.core.protocol.DEFAULT_CONFIG['allow_pickle'] = True
+
+
 # server parameters 
 DEBUG=True
 PORT=9004

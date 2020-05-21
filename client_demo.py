@@ -1,5 +1,9 @@
 import rpyc
 
+#pickling of return objects 
+rpyc.core.protocol.DEFAULT_CONFIG['allow_pickle'] = True
+
+
 ZUMI_IP = '192.168.10.1' #default IP  if connected to umi Wifi
 ZUMI_PORT = 9004
 
