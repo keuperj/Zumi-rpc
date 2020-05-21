@@ -57,3 +57,10 @@ get_picture(resolution=(1024,768))
 ```  
 returns a *NumPy* array of size (resolution_x, resolution_y,3) -> RGB image.
 
+### get return values
+if you call a function which returns an object, you need to make a copy of this object. Otherwise, you will only have a local reference to this object and the data remains on the Zumi! So, for the cam example:
+```
+frame = np.array(get_picture())
+```
+will produce a local copy of the output.
+
