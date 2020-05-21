@@ -156,7 +156,7 @@ class ZumiService(rpyc.Service):
         with picamera.PiCamera() as camera:
             camera.resolution = resolution
             camera.rotation = 180
-            output = np.empty((resolution[0],resolution[1],3),dtype=np.uint8)
+            output = np.empty((resolution[1],resolution[0],3),dtype=np.uint8)
             camera.capture(output , 'rgb')
 
         return output
