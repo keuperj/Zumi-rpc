@@ -64,3 +64,5 @@ frame = np.array(get_picture())
 ```
 will produce a local copy of the output.
 
+# More Zumi Libs and Hacks
+see [our Zumi Repo](https://github.com/keuperj/ZumiWorld)
