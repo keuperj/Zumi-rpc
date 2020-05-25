@@ -64,3 +64,6 @@ frame = np.array(get_picture())
 ```
 will produce a local copy of the output.
 
+## Multtiple Connectons
+The Zumi API and the RPC Server are non-blocking. Hence, you can have multiple RPC-clients connected to one server as well as use RPC and Jupyter simultaneously.
+
