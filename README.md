@@ -14,6 +14,8 @@ pip install rpyc
 ```
 
 ### On Zumi
+*use ssh or the Jupyter terminal to get on a console*
+
 Clone this Git repo:
 ```
 git clone https://github.com/keuperj/Zumi-rpc.gi
@@ -43,9 +45,17 @@ chmod 700 client.*
 
 
 #### Start Server
+Use ssh or the Jupyter terminal to 
 ```
 python3 RPC-Server.py &
 ```
+For an automatic start at boot time, you can add this command to ```/etc/rc.local``` 
+
+#### Working with Jupyter
+The RPC Server does not interfer with the Jupyter frontend. You can run them both at the same time. Our typical workflow is to start the RPC-Server from a Jupyter terminal. 
+
+#### Remote access over the Internet
+If you want to access the Zumi not only from it's own Wifi, but accross the internet, you need a relay server. Details are explained in [our Zumi Repo](https://github.com/keuperj/ZumiWorld) - just replace the Jupyter Port 8888 with your RPC-Server port... 
 
 ## API
 Zumi-RPC simply reproduces the original [*Zumi* API](http://docs.robolink.com/zumi-library), with some exceptions:
