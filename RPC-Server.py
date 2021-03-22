@@ -134,6 +134,9 @@ class ZumiService(rpyc.Service):
 
     def exposed_go_reverse(self, speed, desired_angle, max_speed=127):
         self.zumi.go_reverse(speed, desired_angle, max_speed)
+        
+    def exposed_line_follower(self, duration, left_thresh=100, right_thresh=100):
+        self.zumi.line_follower(duration, left_thresh, right_thresh)
 
 #SENSORS
 
@@ -144,11 +147,11 @@ class ZumiService(rpyc.Service):
         return self.zumi.get_battery_voltage()
 
     #this is undocumented in the Zumi API
-    def exposed_get_battery_percentage(self):
-        self.zumi.get_battery_percentage()
+    def exposed_get_battery_percent(self):
+        return self.zumi.get_battery_percent()
 
     def exposed_get_IR_data(self,ir_sensor_index):
-        self.zumi.get_IR_data(ir_sensor_index)
+        return self.zumi.get_IR_data(ir_sensor_index)
 
 # CAM - here we use picamera directly, avoiding the poor zumi interface
 
